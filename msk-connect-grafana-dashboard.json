@@ -868,7 +868,7 @@
           "steppedLine": false,
           "targets": [
             {
-              "expr": "sum by (topic) (kafka_server_BrokerTopicMetrics_Count{name=\"BytesInPerSec\", topic=~\".+\"})",
+              "expr": "rate(kafka_server_BrokerTopicMetrics_Count{name=\"BytesInPerSec\", topic=~\".+\"}[1m])",
               "interval": "",
               "legendFormat": "{{topic}}",
               "refId": "A"
@@ -964,7 +964,7 @@
           "steppedLine": false,
           "targets": [
             {
-              "expr": "sum by (topic) (kafka_server_BrokerTopicMetrics_Count{name=\"BytesOutPerSec\", topic=~\".+\"})",
+              "expr": "rate(kafka_server_BrokerTopicMetrics_Count{name=\"BytesOutPerSec\", topic=~\".+\"}[1m])",
               "interval": "",
               "legendFormat": "{{topic}}",
               "refId": "A"
