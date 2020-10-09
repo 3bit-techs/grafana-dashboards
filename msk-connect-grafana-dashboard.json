@@ -774,7 +774,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "rate(kafka_server_BrokerTopicMetrics_Count{name=\"MessagesInPerSec\", topic=~\".+\"}[1m])",
+          "expr": "sum(rate(kafka_server_BrokerTopicMetrics_Count{name=\"MessagesInPerSec\", topic=~\".+\"}[1m])) by(topic)",
           "interval": "",
           "legendFormat": "{{topic}}",
           "refId": "A"
@@ -870,7 +870,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "rate(kafka_server_BrokerTopicMetrics_Count{name=\"BytesInPerSec\", topic=~\".+\"}[1m])",
+          "expr": "sum(rate(kafka_server_BrokerTopicMetrics_Count{name=\"BytesInPerSec\", topic=~\".+\"}[1m])) by(topic)",
           "interval": "",
           "legendFormat": "{{topic}}",
           "refId": "A"
@@ -966,7 +966,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "rate(kafka_server_BrokerTopicMetrics_Count{name=\"BytesOutPerSec\", topic=~\".+\"}[1m])",
+          "expr": "sum(rate(kafka_server_BrokerTopicMetrics_Count{name=\"BytesOutPerSec\", topic=~\".+\"}[1m])) by(topic)",
           "interval": "",
           "legendFormat": "{{topic}}",
           "refId": "A"
