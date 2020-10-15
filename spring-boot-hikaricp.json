@@ -3,7 +3,7 @@
     "list": [
       {
         "builtIn": 1,
-        "datasource": "Prometheus",
+        "datasource": "$datasource",
         "enable": true,
         "hide": true,
         "iconColor": "rgba(0, 211, 255, 1)",
@@ -11,7 +11,7 @@
         "type": "dashboard"
       },
       {
-        "datasource": "Prometheus",
+        "datasource": "$datasource",
         "enable": true,
         "expr": "resets(process_uptime_seconds{application=\"$application\", region=\"$region\", instance=\"$instance\"}[1m]) > 0",
         "hide": false,
@@ -32,13 +32,13 @@
   "editable": true,
   "gnetId": 6083,
   "graphTooltip": 1,
-  "id": 29,
-  "iteration": 1600799254807,
+  "id": 2,
+  "iteration": 1602784686389,
   "links": [],
   "panels": [
     {
       "collapsed": false,
-      "datasource": null,
+      "datasource": "$datasource",
       "gridPos": {
         "h": 1,
         "w": 24,
@@ -59,7 +59,7 @@
         "rgba(237, 129, 40, 0.89)",
         "#d44a3a"
       ],
-      "datasource": "Prometheus",
+      "datasource": "$datasource",
       "fieldConfig": {
         "defaults": {
           "custom": {}
@@ -147,7 +147,7 @@
         "rgba(237, 129, 40, 0.89)",
         "#d44a3a"
       ],
-      "datasource": "Prometheus",
+      "datasource": "$datasource",
       "fieldConfig": {
         "defaults": {
           "custom": {}
@@ -235,7 +235,7 @@
         "rgba(237, 129, 40, 0.89)",
         "#d44a3a"
       ],
-      "datasource": "Prometheus",
+      "datasource": "$datasource",
       "fieldConfig": {
         "defaults": {
           "custom": {}
@@ -316,7 +316,7 @@
     },
     {
       "collapsed": false,
-      "datasource": null,
+      "datasource": "$datasource",
       "gridPos": {
         "h": 1,
         "w": 24,
@@ -333,7 +333,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "Prometheus",
+      "datasource": "$datasource",
       "fieldConfig": {
         "defaults": {
           "custom": {}
@@ -451,7 +451,7 @@
         "rgba(237, 129, 40, 0.89)",
         "#d44a3a"
       ],
-      "datasource": "Prometheus",
+      "datasource": "$datasource",
       "fieldConfig": {
         "defaults": {
           "custom": {}
@@ -539,7 +539,7 @@
         "rgba(237, 129, 40, 0.89)",
         "#d44a3a"
       ],
-      "datasource": "Prometheus",
+      "datasource": "$datasource",
       "fieldConfig": {
         "defaults": {
           "custom": {}
@@ -627,7 +627,7 @@
         "rgba(237, 129, 40, 0.89)",
         "#d44a3a"
       ],
-      "datasource": "Prometheus",
+      "datasource": "$datasource",
       "fieldConfig": {
         "defaults": {
           "custom": {}
@@ -711,7 +711,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "Prometheus",
+      "datasource": "$datasource",
       "fieldConfig": {
         "defaults": {
           "custom": {}
@@ -831,13 +831,32 @@
   "templating": {
     "list": [
       {
+        "current": {
+          "selected": true,
+          "text": "Prometheus-Rumo-Dev",
+          "value": "Prometheus-Rumo-Dev"
+        },
+        "hide": 0,
+        "includeAll": false,
+        "label": null,
+        "multi": false,
+        "name": "datasource",
+        "options": [],
+        "query": "prometheus",
+        "queryValue": "",
+        "refresh": 1,
+        "regex": "",
+        "skipUrlSync": false,
+        "type": "datasource"
+      },
+      {
         "allValue": null,
         "current": {
           "selected": false,
-          "text": "malhas",
-          "value": "malhas"
+          "text": "csod-funcionario",
+          "value": "csod-funcionario"
         },
-        "datasource": "Prometheus",
+        "datasource": "$datasource",
         "definition": "label_values(hikaricp_connections_min, application)",
         "hide": 0,
         "includeAll": false,
@@ -863,7 +882,7 @@
           "text": "All",
           "value": "$__all"
         },
-        "datasource": "Prometheus",
+        "datasource": "$datasource",
         "definition": "label_values(hikaricp_connections_min{application=\"$application\"}, instance)",
         "hide": 0,
         "includeAll": true,
@@ -886,10 +905,10 @@
         "allValue": null,
         "current": {
           "selected": false,
-          "text": "SpringBootJPAHikariCPSRM",
-          "value": "SpringBootJPAHikariCPSRM"
+          "text": "HikariPool-1",
+          "value": "HikariPool-1"
         },
-        "datasource": "Prometheus",
+        "datasource": "$datasource",
         "definition": "label_values(hikaricp_connections_min{application=\"$application\", instance=~\"$instance\"}, pool)",
         "hide": 0,
         "includeAll": false,
@@ -941,5 +960,5 @@
   "timezone": "",
   "title": "Spring Boot HikariCP / JDBC",
   "uid": "TVHoNqdGk",
-  "version": 3
+  "version": 1
 }
