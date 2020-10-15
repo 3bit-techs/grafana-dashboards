@@ -3,7 +3,7 @@
     "list": [
       {
         "builtIn": 1,
-        "datasource": "${datasource}",
+        "datasource": null,
         "enable": true,
         "hide": true,
         "iconColor": "rgba(0, 211, 255, 1)",
@@ -13,7 +13,7 @@
         "type": "dashboard"
       },
       {
-        "datasource": "${datasource}",
+        "datasource": null,
         "enable": true,
         "expr": "resets(process_uptime_seconds{application=\"$application\", instance=\"$instance\"}[1m]) > 0",
         "iconColor": "rgba(255, 96, 96, 1)",
@@ -36,7 +36,7 @@
   "panels": [
     {
       "collapsed": false,
-      "datasource": "${datasource}",
+      "datasource": null,
       "gridPos": {
         "h": 1,
         "w": 24,
@@ -58,7 +58,7 @@
         "rgba(237, 129, 40, 0.89)",
         "rgba(50, 172, 45, 0.97)"
       ],
-      "datasource": "${datasource}",
+      "datasource": null,
       "decimals": 1,
       "editable": true,
       "error": false,
@@ -152,7 +152,7 @@
         "rgba(237, 129, 40, 0.89)",
         "rgba(50, 172, 45, 0.97)"
       ],
-      "datasource": "${datasource}",
+      "datasource": null,
       "decimals": null,
       "editable": true,
       "error": false,
@@ -245,7 +245,7 @@
         "rgba(237, 129, 40, 0.89)",
         "rgba(245, 54, 54, 0.9)"
       ],
-      "datasource": "${datasource}",
+      "datasource": null,
       "decimals": 2,
       "editable": true,
       "error": false,
@@ -336,7 +336,7 @@
         "rgba(237, 129, 40, 0.89)",
         "rgba(245, 54, 54, 0.9)"
       ],
-      "datasource": "${datasource}",
+      "datasource": null,
       "decimals": 2,
       "editable": true,
       "error": false,
@@ -430,7 +430,7 @@
     },
     {
       "collapsed": false,
-      "datasource": "${datasource}",
+      "datasource": null,
       "gridPos": {
         "h": 1,
         "w": 24,
@@ -448,7 +448,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${datasource}",
+      "datasource": null,
       "fieldConfig": {
         "defaults": {
           "custom": {}
@@ -548,7 +548,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${datasource}",
+      "datasource": null,
       "fieldConfig": {
         "defaults": {
           "custom": {}
@@ -645,7 +645,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${datasource}",
+      "datasource": null,
       "fieldConfig": {
         "defaults": {
           "custom": {}
@@ -750,7 +750,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${datasource}",
+      "datasource": null,
       "description": "",
       "fieldConfig": {
         "defaults": {
@@ -886,7 +886,7 @@
     },
     {
       "collapsed": false,
-      "datasource": "${datasource}",
+      "datasource": null,
       "gridPos": {
         "h": 1,
         "w": 24,
@@ -904,7 +904,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${datasource}",
+      "datasource": null,
       "editable": true,
       "error": false,
       "fieldConfig": {
@@ -1035,7 +1035,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${datasource}",
+      "datasource": null,
       "editable": true,
       "error": false,
       "fieldConfig": {
@@ -1167,7 +1167,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${datasource}",
+      "datasource": null,
       "editable": true,
       "error": false,
       "fieldConfig": {
@@ -1299,7 +1299,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${datasource}",
+      "datasource": null,
       "editable": true,
       "error": false,
       "fieldConfig": {
@@ -1433,7 +1433,7 @@
     },
     {
       "collapsed": false,
-      "datasource": "${datasource}",
+      "datasource": null,
       "gridPos": {
         "h": 1,
         "w": 24,
@@ -1451,7 +1451,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${datasource}",
+      "datasource": null,
       "editable": true,
       "error": false,
       "fieldConfig": {
@@ -1584,7 +1584,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${datasource}",
+      "datasource": null,
       "editable": true,
       "error": false,
       "fieldConfig": {
@@ -1707,7 +1707,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${datasource}",
+      "datasource": null,
       "editable": true,
       "error": false,
       "fieldConfig": {
@@ -1856,7 +1856,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${datasource}",
+      "datasource": null,
       "fieldConfig": {
         "defaults": {
           "custom": {}
@@ -1960,7 +1960,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${datasource}",
+      "datasource": null,
       "editable": true,
       "error": false,
       "fieldConfig": {
@@ -2091,7 +2091,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${datasource}",
+      "datasource": null,
       "editable": true,
       "error": false,
       "fieldConfig": {
@@ -2215,7 +2215,7 @@
     },
     {
       "collapsed": false,
-      "datasource": "${datasource}",
+      "datasource": null,
       "gridPos": {
         "h": 1,
         "w": 24,
@@ -2233,7 +2233,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${datasource}",
+      "datasource": null,
       "editable": true,
       "error": false,
       "fieldConfig": {
@@ -2373,7 +2373,7 @@
     },
     {
       "collapsed": false,
-      "datasource": "${datasource}",
+      "datasource": null,
       "gridPos": {
         "h": 1,
         "w": 24,
@@ -2391,7 +2391,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${datasource}",
+      "datasource": null,
       "editable": true,
       "error": false,
       "fieldConfig": {
@@ -2531,7 +2531,7 @@
     },
     {
       "collapsed": false,
-      "datasource": "${datasource}",
+      "datasource": null,
       "gridPos": {
         "h": 1,
         "w": 24,
@@ -2549,7 +2549,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${datasource}",
+      "datasource": null,
       "fieldConfig": {
         "defaults": {
           "custom": {}
@@ -2646,7 +2646,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${datasource}",
+      "datasource": null,
       "fieldConfig": {
         "defaults": {
           "custom": {}
@@ -2753,7 +2753,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${datasource}",
+      "datasource": null,
       "fieldConfig": {
         "defaults": {
           "custom": {}
@@ -2855,7 +2855,7 @@
     },
     {
       "collapsed": false,
-      "datasource": "${datasource}",
+      "datasource": null,
       "gridPos": {
         "h": 1,
         "w": 24,
@@ -2873,7 +2873,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${datasource}",
+      "datasource": null,
       "editable": true,
       "error": false,
       "fieldConfig": {
@@ -2988,7 +2988,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${datasource}",
+      "datasource": null,
       "editable": true,
       "error": false,
       "fieldConfig": {
@@ -3103,7 +3103,7 @@
     },
     {
       "collapsed": false,
-      "datasource": "${datasource}",
+      "datasource": null,
       "gridPos": {
         "h": 1,
         "w": 24,
@@ -3121,7 +3121,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${datasource}",
+      "datasource": null,
       "editable": true,
       "error": false,
       "fieldConfig": {
@@ -3245,7 +3245,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${datasource}",
+      "datasource": null,
       "editable": true,
       "error": false,
       "fieldConfig": {
@@ -3361,7 +3361,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${datasource}",
+      "datasource": null,
       "editable": true,
       "error": false,
       "fieldConfig": {
@@ -3485,7 +3485,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${datasource}",
+      "datasource": null,
       "editable": true,
       "error": false,
       "fieldConfig": {
@@ -3630,7 +3630,7 @@
           "text": "None",
           "value": ""
         },
-        "datasource": "${datasource}",
+        "datasource": null,
         "definition": "label_values(application)",
         "hide": 0,
         "includeAll": false,
@@ -3658,7 +3658,7 @@
           "text": "None",
           "value": ""
         },
-        "datasource": "${datasource}",
+        "datasource": null,
         "definition": "label_values(jvm_memory_used_bytes{application=\"$application\"}, instance)",
         "hide": 0,
         "includeAll": false,
@@ -3686,7 +3686,7 @@
           "text": "All",
           "value": "$__all"
         },
-        "datasource": "${datasource}",
+        "datasource": null,
         "definition": "label_values(jvm_memory_used_bytes{application=\"$application\", instance=\"$instance\", area=\"heap\"},id)",
         "hide": 0,
         "includeAll": true,
@@ -3714,7 +3714,7 @@
           "text": "All",
           "value": "$__all"
         },
-        "datasource": "${datasource}",
+        "datasource": null,
         "definition": "label_values(jvm_memory_used_bytes{application=\"$application\", instance=\"$instance\", area=\"nonheap\"},id)",
         "hide": 0,
         "includeAll": true,
