@@ -16,7 +16,6 @@
   "editable": true,
   "gnetId": 12669,
   "graphTooltip": 0,
-  "id": 2,
   "links": [],
   "panels": [
     {
@@ -79,7 +78,7 @@
       "pluginVersion": "7.2.0",
       "targets": [
         {
-          "expr": "count(cp_kafka_connect_connect_connector_metrics)",
+          "expr": "sum(cp_kafka_connect_connect_worker_metrics_connector_count)",
           "instant": false,
           "interval": "",
           "legendFormat": "",
@@ -119,6 +118,64 @@
         "x": 4,
         "y": 1
       },
+      "id": 25,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "none",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "mean"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "7.2.0",
+      "targets": [
+        {
+          "expr": "sum(cp_kafka_connect_connect_worker_metrics_task_count)",
+          "instant": true,
+          "interval": "",
+          "legendFormat": "",
+          "refId": "A"
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Number of Tasks",
+      "type": "stat"
+    },
+    {
+      "datasource": "Prometheus",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {},
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 4,
+        "x": 8,
+        "y": 1
+      },
       "id": 23,
       "options": {
         "colorMode": "value",
@@ -137,7 +194,7 @@
       "pluginVersion": "7.2.0",
       "targets": [
         {
-          "expr": "count(cp_kafka_connect_connect_worker_metrics_connector_startup_success_total)",
+          "expr": "sum(cp_kafka_connect_connect_worker_metrics_connector_startup_success_total)",
           "instant": true,
           "interval": "",
           "legendFormat": "",
@@ -174,7 +231,7 @@
       "gridPos": {
         "h": 4,
         "w": 4,
-        "x": 8,
+        "x": 12,
         "y": 1
       },
       "id": 24,
@@ -195,7 +252,7 @@
       "pluginVersion": "7.2.0",
       "targets": [
         {
-          "expr": "count(cp_kafka_connect_connect_worker_metrics_connector_startup_failure_total)",
+          "expr": "sum(cp_kafka_connect_connect_worker_metrics_connector_startup_failure_total)",
           "instant": true,
           "interval": "",
           "legendFormat": "",
@@ -205,64 +262,6 @@
       "timeFrom": null,
       "timeShift": null,
       "title": "Connector Startup Failure Total",
-      "type": "stat"
-    },
-    {
-      "datasource": "Prometheus",
-      "fieldConfig": {
-        "defaults": {
-          "custom": {},
-          "mappings": [],
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {
-                "color": "green",
-                "value": null
-              },
-              {
-                "color": "red",
-                "value": 80
-              }
-            ]
-          }
-        },
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 4,
-        "w": 4,
-        "x": 12,
-        "y": 1
-      },
-      "id": 25,
-      "options": {
-        "colorMode": "value",
-        "graphMode": "none",
-        "justifyMode": "auto",
-        "orientation": "auto",
-        "reduceOptions": {
-          "calcs": [
-            "mean"
-          ],
-          "fields": "",
-          "values": false
-        },
-        "textMode": "auto"
-      },
-      "pluginVersion": "7.2.0",
-      "targets": [
-        {
-          "expr": "count(cp_kafka_connect_connect_worker_metrics_task_count)",
-          "instant": true,
-          "interval": "",
-          "legendFormat": "",
-          "refId": "A"
-        }
-      ],
-      "timeFrom": null,
-      "timeShift": null,
-      "title": "Number of Tasks",
       "type": "stat"
     },
     {
@@ -311,7 +310,7 @@
       "pluginVersion": "7.2.0",
       "targets": [
         {
-          "expr": "count(cp_kafka_connect_connect_worker_metrics_task_count)",
+          "expr": "sum(cp_kafka_connect_connect_worker_metrics_task_startup_success_total)",
           "instant": true,
           "interval": "",
           "legendFormat": "",
@@ -320,7 +319,7 @@
       ],
       "timeFrom": null,
       "timeShift": null,
-      "title": "Number of Tasks",
+      "title": "Task Startup Success Total",
       "type": "stat"
     },
     {
@@ -369,7 +368,7 @@
       "pluginVersion": "7.2.0",
       "targets": [
         {
-          "expr": "count(cp_kafka_connect_connect_worker_metrics_task_startup_failure_total)",
+          "expr": "sum(cp_kafka_connect_connect_worker_metrics_task_startup_failure_total)",
           "instant": true,
           "interval": "",
           "legendFormat": "",
@@ -580,6 +579,7 @@
       },
       "yaxes": [
         {
+          "$$hashKey": "object:315",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -588,6 +588,7 @@
           "show": true
         },
         {
+          "$$hashKey": "object:316",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -623,7 +624,8 @@
                 "value": 80
               }
             ]
-          }
+          },
+          "unit": "Computation"
         },
         "overrides": []
       },
@@ -690,6 +692,205 @@
       },
       "yaxes": [
         {
+          "$$hashKey": "object:211",
+          "format": "Computation",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "$$hashKey": "object:212",
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "fill": 2,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 8,
+        "w": 8,
+        "x": 0,
+        "y": 12
+      },
+      "hiddenSeries": false,
+      "id": 32,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null as zero",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "7.2.0",
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "expr": "sum(container_memory_working_set_bytes{namespace=\"connect\", pod=~\"cp-kafka-connect-.+\", container!=\"POD\", container!=\"\", image!=\"\"}) by (container, pod)",
+          "hide": false,
+          "interval": "",
+          "intervalFactor": 2,
+          "legendFormat": "{{container}}",
+          "refId": "A"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Memory Usage",
+      "tooltip": {
+        "shared": false,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "$$hashKey": "object:423",
+          "format": "bytes",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "$$hashKey": "object:424",
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "fill": 2,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 8,
+        "w": 8,
+        "x": 8,
+        "y": 12
+      },
+      "hiddenSeries": false,
+      "id": 33,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null as zero",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "7.2.0",
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "expr": "sum(node_namespace_pod_container:container_cpu_usage_seconds_total:sum_rate{namespace=\"connect\", pod=~\"cp-kafka-connect.*\", container!=\"POD\"}) by (container, pod)",
+          "hide": false,
+          "interval": "",
+          "intervalFactor": 2,
+          "legendFormat": "{{container}}",
+          "refId": "A"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "CPU Usage",
+      "tooltip": {
+        "shared": false,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "$$hashKey": "object:423",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -698,6 +899,106 @@
           "show": true
         },
         {
+          "$$hashKey": "object:424",
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 7,
+        "w": 8,
+        "x": 16,
+        "y": 12
+      },
+      "hiddenSeries": false,
+      "id": 35,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "7.2.0",
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "expr": "sum(cp_kafka_connect_connect_connector_metrics) by (connector, status, pod)",
+          "format": "time_series",
+          "interval": "",
+          "intervalFactor": 2,
+          "legendFormat": "{{connector}}-POD-{{pod}} ({{status}})",
+          "refId": "A"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Connector Tasks Status Per POD",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "$$hashKey": "object:742",
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "$$hashKey": "object:743",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -718,7 +1019,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 12
+        "y": 20
       },
       "id": 6,
       "panels": [],
@@ -744,7 +1045,7 @@
         "h": 9,
         "w": 8,
         "x": 0,
-        "y": 13
+        "y": 21
       },
       "hiddenSeries": false,
       "id": 2,
@@ -840,7 +1141,7 @@
         "h": 9,
         "w": 8,
         "x": 8,
-        "y": 13
+        "y": 21
       },
       "hiddenSeries": false,
       "id": 3,
@@ -936,7 +1237,7 @@
         "h": 9,
         "w": 8,
         "x": 16,
-        "y": 13
+        "y": 21
       },
       "hiddenSeries": false,
       "id": 4,
@@ -1020,7 +1321,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 22
+        "y": 30
       },
       "id": 8,
       "panels": [],
@@ -1046,7 +1347,7 @@
         "h": 8,
         "w": 8,
         "x": 0,
-        "y": 23
+        "y": 31
       },
       "hiddenSeries": false,
       "id": 10,
@@ -1143,7 +1444,7 @@
         "h": 8,
         "w": 8,
         "x": 8,
-        "y": 23
+        "y": 31
       },
       "hiddenSeries": false,
       "id": 17,
@@ -1240,7 +1541,7 @@
         "h": 8,
         "w": 8,
         "x": 16,
-        "y": 23
+        "y": 31
       },
       "hiddenSeries": false,
       "id": 16,
@@ -1337,7 +1638,7 @@
         "h": 8,
         "w": 8,
         "x": 0,
-        "y": 31
+        "y": 39
       },
       "hiddenSeries": false,
       "id": 11,
@@ -1434,7 +1735,7 @@
         "h": 8,
         "w": 8,
         "x": 8,
-        "y": 31
+        "y": 39
       },
       "hiddenSeries": false,
       "id": 18,
@@ -1523,7 +1824,7 @@
     "list": []
   },
   "time": {
-    "from": "now-1h",
+    "from": "now-5m",
     "to": "now"
   },
   "timepicker": {
