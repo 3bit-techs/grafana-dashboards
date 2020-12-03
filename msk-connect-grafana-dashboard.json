@@ -767,7 +767,7 @@
           "hide": false,
           "interval": "",
           "intervalFactor": 2,
-          "legendFormat": "{{container}}",
+          "legendFormat": "{{container}} ({{pod}})",
           "refId": "A"
         }
       ],
@@ -866,7 +866,7 @@
           "hide": false,
           "interval": "",
           "intervalFactor": 2,
-          "legendFormat": "{{container}}",
+          "legendFormat": "{{container}} {{pod}}",
           "refId": "A"
         }
       ],
@@ -965,7 +965,7 @@
           "format": "time_series",
           "interval": "",
           "intervalFactor": 2,
-          "legendFormat": "{{connector}}-POD-{{pod}} ({{status}})",
+          "legendFormat": "{{connector}} ({{pod}}) - {{status}}",
           "refId": "A"
         }
       ],
