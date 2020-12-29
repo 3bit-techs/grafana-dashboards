@@ -579,7 +579,6 @@
       },
       "yaxes": [
         {
-          "$$hashKey": "object:315",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -588,7 +587,6 @@
           "show": true
         },
         {
-          "$$hashKey": "object:316",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -692,7 +690,6 @@
       },
       "yaxes": [
         {
-          "$$hashKey": "object:211",
           "format": "Computation",
           "label": null,
           "logBase": 1,
@@ -701,7 +698,6 @@
           "show": true
         },
         {
-          "$$hashKey": "object:212",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -791,7 +787,6 @@
       },
       "yaxes": [
         {
-          "$$hashKey": "object:423",
           "format": "bytes",
           "label": null,
           "logBase": 1,
@@ -800,7 +795,6 @@
           "show": true
         },
         {
-          "$$hashKey": "object:424",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -890,7 +884,6 @@
       },
       "yaxes": [
         {
-          "$$hashKey": "object:423",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -899,7 +892,6 @@
           "show": true
         },
         {
-          "$$hashKey": "object:424",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -989,7 +981,6 @@
       },
       "yaxes": [
         {
-          "$$hashKey": "object:742",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -998,7 +989,6 @@
           "show": true
         },
         {
-          "$$hashKey": "object:743",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -1821,7 +1811,26 @@
     "connect"
   ],
   "templating": {
-    "list": []
+    "list": [
+      {
+        "current": {
+          "selected": false,
+          "text": "Prometheus",
+          "value": "Prometheus"
+        },
+        "hide": 0,
+        "includeAll": false,
+        "label": null,
+        "multi": false,
+        "name": "datasource",
+        "options": [],
+        "query": "prometheus",
+        "refresh": 1,
+        "regex": "",
+        "skipUrlSync": false,
+        "type": "datasource"
+      }
+    ]
   },
   "time": {
     "from": "now-5m",
